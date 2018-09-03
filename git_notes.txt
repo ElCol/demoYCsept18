@@ -1,0 +1,9 @@
+git init
+
+git add . # add files to the stage; will be included in snapshot
+
+git status
+
+git commit -am
+
+git log
