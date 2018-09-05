@@ -1,0 +1,142 @@
+git init # start a hidden git folder
+
+git add . # add files to the stage; will be included in snapshot
+
+git status # what's in the git right noww
+
+git commit -am 
+
+git log
+
+Java:
+
+Variables need declaration: what type it is and what name it will have; can be done only once
+ and Initialization: assign a value to it; can do as many times as want
+
+eighenshcap || property
+waarde eigenschap || value of the property
+
+2 types of variables
+
+look into what void is again
+
+
+Strongly Typed
+instantiation
+argument
+parameter
+return type
+
+read chapters 2, 3 of book in google docs
+
+
+// can overload if the signature is different: amount, order, type of arguments
+
+public class demo {
+    public static void main(String[] args) {
+     Car car = new Car();
+     car.drive();
+     car.drive(4);
+     Dealer dealer = new Dealer();
+     Car car2 = dealer.buy();
+     car2.drive(5);
+     car.carType("Volvo");
+
+     car.colour = "green";
+        colCar(car);
+        System.out.println(car.colour);
+
+
+    }
+    static void colCar(Car car){
+        car.colour = "red";
+    }
+}
+class Car{
+    String colour;
+    void drive(){
+        System.out.println("The car is driving");
+    }
+    void drive(int a){
+        System.out.println("The car is driving in gear number "+a);
+    }
+    void carType(String car){
+        System.out.println("The car is of brand "+car);
+    }
+
+}
+class Dealer{
+    Car buy(){
+        return new Car();
+    }
+
+}
+
+
+
+
+input from a user: Scanner
+
+random: Random
+
+
+
+this reserved term Java
+
+
+// can overload if the signature is different: amount, order, type of arguments
+
+public class demo {
+    public static void main(String[] args) {
+        Bird Leo = new Bird();
+        Leo.flies();
+        Leo.feelsPain();
+        Leo.lives();
+        Animal Julie = new Animal();
+        Julie.feelsPain();
+     //   Julie.flies();
+        Bird Frank = Leo.isBornFrom();
+        Frank.lives();
+    //    Leo.swims();
+        Fish Carl = new Fish();
+        Carl.swims();
+
+
+
+    }
+
+}
+abstract class Organism{
+    abstract void lives();
+   // abstract void isBornFrom();
+
+}
+class Animal extends Organism{
+    void lives(){}
+    Animal isBornFrom(){
+        return new Animal();
+    }
+    void feelsPain(){}
+}
+class Bird extends Animal{
+    void lives(){
+        System.out.println("Lives in the sky");
+    }
+    Bird isBornFrom(){
+        return new Bird();
+    }
+    void flies(){
+
+    }
+}
+class Fish extends Animal{
+  //  Fish isBornFrom(){
+   //     return new Fish();
+    //}
+    void lives(){
+        System.out.println("Lives in the water");
+    }
+    void swims(){
+    }
+
+}
